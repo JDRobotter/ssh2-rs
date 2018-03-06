@@ -432,6 +432,9 @@ impl Session {
     /// Instruct the remote SSH server to begin listening for inbound TCP/IP
     /// connections.
     ///
+    /// If `host`is provided, remote SSH server will bind to this specific
+    /// address.
+    ///
     /// New connections will be queued by the library until accepted by the
     /// `accept` method on the returned `Listener`.
     pub fn channel_forward_listen(&self,
